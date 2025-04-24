@@ -14,4 +14,8 @@ class RoomController extends Controller
         $rooms = $this->roomService->getAllRooms();
         return $rooms;
     }
+    public function store()
+    {
+        return 'data';
+    }
 }

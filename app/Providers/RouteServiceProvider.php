@@ -27,7 +27,9 @@ class RouteServiceProvider extends ServiceProvider
     protected function loadModuleRoutes()
     {
         foreach (glob(base_path('app/Modules/*/routes.php')) as $routeFile) {
-            Route::prefix('api')->middleware('auth:sanctum')->group(function () use ($routeFile) {
+            Route::prefix('api')
+//                ->middleware('auth:sanctum')
+                ->group(function () use ($routeFile) {
                 require $routeFile;
             });
         }
