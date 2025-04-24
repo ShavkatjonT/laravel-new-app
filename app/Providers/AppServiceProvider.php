@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
+use App\Modules\Additions\Interfaces\RoomRepositoryInterface;
 use App\Modules\Additions\Repositories\RoomRepository;
-use App\Modules\Additions\Room\Interfaces\RoomRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

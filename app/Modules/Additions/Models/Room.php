@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Modules\Additions\Models;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
