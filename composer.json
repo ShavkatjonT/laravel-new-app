@@ -10,9 +10,16 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "intervention/image": "^3.11",
+        "irazasyed/telegram-bot-sdk": "^3.15",
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "nativephp/electron": "^1.0",
+        "predis/predis": "2.0",
+        "spatie/pdf-to-image": "^1.2",
+        "telegram-bot/api": "^2.5",
+        "thiagoalessio/tesseract_ocr": "^2.13"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -55,6 +62,10 @@
         "dev": [
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"npm run dev\" --names='server,queue,vite'"
+        ],
+        "native:dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -k -c \"#93c5fd,#c4b5fd\" \"php artisan native:serve --no-interaction\" \"npm run dev\" --names=app,vite"
         ]
     },
     "extra": {

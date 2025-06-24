@@ -16,4 +16,5 @@ class Room extends Model
         'status' => 'boolean',
         'count_students' => 'integer'
     ];
+    protected $keyType = 'string';
 }
